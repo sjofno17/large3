@@ -1,6 +1,8 @@
-module.exports = `
-type
 
+
+//það á örugglega að færa allt þetta i sér möppur undir schema
+
+module.exports = `
     type BasketballField {
         id : ID!
         name : string! 
