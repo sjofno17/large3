@@ -11,10 +11,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.19.4"
   },
   "dependencies": {
-    "apollo-server": "^2.18.1",
+    "apollo-server": "^2.18.2",
     "graphql": "^15.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjofno17/large3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sjofno17/large3/issues"
+  },
+  "homepage": "https://github.com/sjofno17/large3#readme"
 }

@@ -1,11 +1,12 @@
 const { ApolloServer } = require('apollo-server');
+const typeDefs = '';
+const resolvers = {};
 
 const server = new ApolloServer({
-    /*
-        Add typeDefs
-        Add resolvers
-    */
+    typeDefs,
+    resolvers
 });
 
-server.listen()
+server
+    .listen() //listens on port 4000 by default
     .then(({ url }) => console.log(`GraphQL Service is running on ${ url }`));
