@@ -1,3 +1,7 @@
+//
+// athuga hvort þetta sé gert rétt
+//
+
 module.exports `
     type Query {
         allBasketballFields: [BasketballField!]!
@@ -8,6 +12,8 @@ module.exports `
         player(id: Int!): Player
     }
 `;
+
+
 
 /*
 
@@ -21,5 +27,3 @@ should be used to filter the data based on the status of the basketball field
 • (5%) player - Should return a specific player by id
 
 */
-
-//Eftir að gera síðustu 3
