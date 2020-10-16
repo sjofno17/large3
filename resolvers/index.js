@@ -1,14 +1,17 @@
-const db = require('../data/db');
+const BasketballFieldResolver = require('./basketballFieldResolver');
+const PickupGameResolver = require('./pickupGameResolver');
+const PlayerResolver = require('./playerResolver');
 
 module.exports = {
     Query: {
-        allPlayers: () => [],
-        player: () => ({}),
-        allBasketballFields: () => [],
-        basketballField: () => ({}),
-        allPickupGames: () => [],
-        pickupGame: () => ({})
-    }
+        ...BasketballFieldResolver.queries,
+        ...PickupGameResolver.queries,        
+        ...PlayerResolver.queries,
+    },
+    Mutation: {
+        ...PickupGameResolver.mutations,
+        ...PlayerResolver.mutations
+      }
 };
 
 //hér þarf að skoða þetta betur
