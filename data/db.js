@@ -15,7 +15,7 @@ keepAlive: true,
 useUnifiedTopology: true  });
 
 module.exports = {
-    BasketballFields: connection.models('BasketballFields', basketballFieldSchema),
-    Player: connection.models('Player', playerSchema),
-    pickupGame: connection.models('PickupGame', pickupGameShcema)
+    BasketballField: connection.model('BasketballField', basketballFieldSchema),
+    Player: connection.model('Player', playerSchema),
+    PickupGame: connection.model('PickupGame', pickupGameShcema)
 }
