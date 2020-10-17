@@ -1,13 +1,14 @@
-module.exports `
+module.exports = `
+    scalar Moment
     type Mutation {
-        createPickupGame(start: Moment! end: Moment! loacation: BasketballField! host: Player!): PickupGame
-        createPlayer(name: string!): Player
-        updatePlayer(id: ID! name:string!): Player
+        createPickupGame(start: Moment! end: Moment! basketBallFieldId: String! hostId: String!): PickupGame
+        createPlayer(name: String!): Player
+        updatePlayer(id: ID! name:String!): Player
         removePickupGame(id: ID!): PickupGame
         removePlayer(id: ID!): Player
-        addPlayerToPickupGame(): PickupGame
-        removePlayerFromPickupGame(): PickupGame
+        addPlayerToPickupGame(playerId: ID! pickupGameID: String! ): PickupGame
+        removePlayerFromPickupGame(playerId: ID! pickupGameId: String! ) : PickupGame
     }
 `;
 
-//eftir að setja í síðustu tvo og athuga hvort hinir séu réttir
+
