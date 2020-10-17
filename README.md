@@ -15,4 +15,5 @@ node index.js
 
 ## Team Members 
 * Maciej Sierzputowski
+* Matthías Skjöldur Sigurðsson
 * Sjöfn Óskarsdóttir
