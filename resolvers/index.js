@@ -11,7 +11,7 @@ module.exports = {
     Mutation: {
         ...PickupGameResolver.mutations,
         ...PlayerResolver.mutations
-      }
+    }
 };
 
-//hér þarf að skoða þetta betur
+//hér þarf að skoða betur

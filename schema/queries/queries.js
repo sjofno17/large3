@@ -2,7 +2,7 @@
 // athuga hvort þetta sé gert rétt
 //
 
-module.exports `
+module.exports = `
     type Query {
         allBasketballFields: [BasketballField!]!
         allPickupGames: [PickupGame!]!
@@ -12,8 +12,6 @@ module.exports `
         player(id: Int!): Player
     }
 `;
-
-
 
 /*
 
