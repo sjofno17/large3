@@ -3,19 +3,17 @@
  *  accessible via the context
  *  (https://www.apollographql.com/docs/apolloserver/security/authentication/#putting-user-info-on-the-context)
  */
-
 const mongoose = require('mongoose');
-const basketballFieldSchema = require('./dbSchema/basketballField');
 const pickupGameShcema = require('./dbSchema/pickupGame');
 const playerSchema = require('./dbSchema/player');
-const connection = mongoose.createConnection("", { useNewUrlParser: true,
+const connection = mongoose.createConnection("mongodvconnectionstring", { useNewUrlParser: true,
 useCreateIndex: true,
 autoIndex: true,
 keepAlive: true,
+useFindAndModify: false,
 useUnifiedTopology: true  });
 
 module.exports = {
-    BasketballField: connection.model('BasketballField', basketballFieldSchema),
     Player: connection.model('Player', playerSchema),
     PickupGame: connection.model('PickupGame', pickupGameShcema)
-}
+};

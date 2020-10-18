@@ -1,6 +1,7 @@
 var moment = require('moment');
+moment.locale('is');
+
 const { GraphQLScalarType } = require('graphql');
-//stolin kóði
 module.exports = new GraphQLScalarType({
     name: 'Moment',
     serialize: function(value) {
@@ -8,7 +9,10 @@ module.exports = new GraphQLScalarType({
         if(!date.isValid){
             throw new GraphQLError('Field serialize error: value is an invalid Date');
         }
-        return date.format();
+        return date.format('llll');
+    },
+    parseValue: function(value) {
+        return moment(value, 'llll').toISOString();
     }
 });
 

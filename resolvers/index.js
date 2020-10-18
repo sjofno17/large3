@@ -1,14 +1,17 @@
-const db = require('../data/db');
-
+const playerResolver = require("./playerResolver");
+const pickupGameResolver = require('./pickupGameResolver');
+const basketballFieldResolver = require('./basketballFieldResolver');
+const moment = require('../schema/scalar/Moment');
 module.exports = {
     Query: {
-        allPlayers: () => [],
-        player: () => ({}),
-        allBasketballFields: () => [],
-        basketballField: () => ({}),
-        allPickupGames: () => [],
-        pickupGame: () => ({})
-    }
+        ...playerResolver.queries,
+        ...pickupGameResolver.queries,
+        ...basketballFieldResolver.queries
+    },
+    Mutation: {
+        ...pickupGameResolver.mutations,
+        ...playerResolver.mutations,
+    },
+    Moment: moment
 };
 
-//hér þarf að skoða þetta betur

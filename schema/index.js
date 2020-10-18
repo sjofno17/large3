@@ -5,6 +5,7 @@ const queries = require('./queries');
 const types = require('./types/Types');
 
 module.exports = `
+  scalar Moment
   ${enums}
   ${inputs}
   ${mutations}
